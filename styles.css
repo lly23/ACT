@@ -5,13 +5,29 @@ html, body {
     font-family: 'Open Sans', sans-serif;
 }
 
+h1, h2, h3, h4, h5, h6, h7 {
+    font-family: 'Fresca', sans-serif;
+}
+
+.carolina-blue {
+    color: #3C8AE5;
+}
+
+.dark-blue {
+    color: #3864A8;
+}
+
+p {
+    color: #5F5F5F;
+}
+
 @supports (grid-area:auto) { 
     .site {
         display: grid;
         width: 100vw;
         height: 100vh;
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 10% auto 10%;
+        grid-template-rows: 10% auto 15%;
         grid-template-areas: 
         'nv nv nv'
         'main main main'
@@ -60,6 +76,34 @@ html, body {
         background-attachment: fixed;
         background-position: center;
         background-repeat: no-repeat;
+        animation: heartbeat 5s infinite;
+    }
+
+    @keyframes heartbeat {
+        0%
+        {
+            transform: scale( .75 );
+        }
+        20%
+        {
+            transform: scale( 1 );
+        }
+        40%
+        {
+            transform: scale( .75 );
+        }
+        60%
+        {
+            transform: scale( 1 );
+        }
+        80%
+        {
+            transform: scale( .75 );
+        }
+        100%
+        {
+            transform: scale( .75 );
+        }
     }
 
     .background-logo {
@@ -71,12 +115,25 @@ html, body {
     }
 
     .about-information {
+        padding-top: 5em;
         background-color: #B5DCFB;
+        width: 100vw;
         height: 90vh;
+        line-height: 2em;
         background-attachment: fixed;
         background-position: center;
         background-repeat: no-repeat;
         text-align: center;
+    }
+
+    .about-information div {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .quote {
+        margin-top: 8em;
     }
 
     /* Footer */
@@ -91,6 +148,27 @@ html, body {
     .vertical {
         margin-left: auto;
         margin-right: auto;
+    }
+
+    .vertical ul li a {
+        display: block;
+        list-style-type: none;
+    }
+
+    input {
+        width: 17em;
+        height: 2em;
+    }
+    
+    button {
+        margin-left: 1em;
+        width: 6em;
+        height: 2em;
+        background: #3C8AE5;
+        color: white;
+        font-size: 12px;
+        border: none;
+        border-radius: 0.2em;
     }
 }
 

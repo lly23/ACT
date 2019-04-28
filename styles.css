@@ -5,7 +5,7 @@ html, body {
     font-family: 'Open Sans', sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6, h7 {
+h1, h2, h3, h4, h5, h6 {
     font-family: 'Fresca', sans-serif;
 }
 
@@ -216,8 +216,33 @@ p {
     background-color: #3C8AE5;
 }
 
+/* END OF SECTIONS */
 
-/* @media only screen and (max-width: 479px) {
+/* media query for tablet portrait layout (768px to 959px) */
+@media only screen and (max-width: 1208px) {
+    /* ...all styles specific to tablet portrait view go here*/
+    #segment{
+        height: 100vh;
+        flex-direction: column;
+    
+    }
+
+
+ }
+ 
+/* media query for mobile landscape layout (480px to 767px) */
+@media only screen and (max-width: 767px) {
+    /* ...all styles specific to mobile landscape view go here */
+    #segment{
+        height: 125vh;
+        flex-direction: column;
+    
+    }
+
+}
+ 
+/* media query for mobile portrait layout (479px or less) */
+@media only screen and (max-width: 479px) {
     @supports (grid-area:auto) { 
         .site {
             display: grid;
@@ -232,4 +257,9 @@ p {
             'footer'  
         }
     }
+ } 
+
+
+/* @media only screen and (max-width: 479px) {
+    
 }  */

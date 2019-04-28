@@ -178,6 +178,45 @@ p {
     }
 }
 
+/* INVOLVEMENT PAGE */
+
+/* segment-pictures will be placed to a especific size to keep everything consistent */
+
+#segment{
+    height: 75vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+.segment-pictures{
+    width: 60vh;
+}
+.seg1{
+    background-color: #00EBC6;
+    
+}
+
+.seg2{
+    background-color:#3C8AE5;
+}
+
+.seg3{
+    background-color: #00EBC6;
+}
+
+.seg4{
+    background-color: #3C8AE5;
+}
+
+.seg5{
+    background-color: #00EBC6;
+}
+.seg6{
+    background-color: #3C8AE5;
+}
+
+
 /* @media only screen and (max-width: 479px) {
     @supports (grid-area:auto) { 
         .site {

@@ -57,10 +57,16 @@ p {
         margin-left: auto;
         margin-right: auto;
         padding: 1em;
+        text-decoration: none;
     }
 
-    .nav-item:hover {
+    .nav-item:hover a{
         color: #00EBC6;
+    }
+
+    .nav-item a{
+        text-decoration: none;
+        color: white;
     }
 
     /* Main */

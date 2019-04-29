@@ -551,6 +551,11 @@ p {
             color: white;
         }
 
+        .officer {
+            width: 60vw;
+            height: 40vh;
+        }
+
         main {
             grid-area: main;
         }

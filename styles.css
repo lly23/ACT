@@ -42,6 +42,7 @@ p {
         background-color: #4B9CD3;
         font-family: 'Fresca', sans-serif;
         position: fixed;
+        z-index: 10;
     }
 
     ul {
@@ -78,6 +79,8 @@ p {
     }
 
     .logo {
+        display: flex;
+        flex-direction: column;
         background: white;;
         height: 90vh;
         margin-left: auto;
@@ -85,6 +88,7 @@ p {
         background-attachment: fixed;
         background-position: center;
         background-repeat: no-repeat;
+        z-index: 1;
     }
 
     .logo img {
@@ -93,8 +97,11 @@ p {
     }
 
     .fa-arrow-down {
-        width: 10vh;
-        height: 10vh;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 1.5em;
+        animation: heartbeat 5s infinite;
+        font-size: 70px;
     }
 
     @keyframes heartbeat {
@@ -179,6 +186,10 @@ p {
         color: white;
     }
 
+    .vertical ul li a:hover {
+        color: #00EBC6;
+    }
+
     .vertical ul {
         display: block;
         text-align: left;
@@ -226,12 +237,14 @@ p {
     margin-bottom: 2em;
 }
 
-.background-blue {
-    background: #B5DCFB;
-}
-
 .officers-div {
+    border-radius: 1em;
+    padding: 2em;
+    width: 70vw;
+    background: #B5DCFB;
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 4em;
     margin-bottom: 4em;
 }
@@ -245,7 +258,7 @@ p {
 }
 
 .officer {
-    border-radius: 100%;
+    border-radius: 1em;
     width: 60vh;
     height: 60vh;
 }
@@ -263,10 +276,34 @@ p {
 
 }
 .segment-pictures{
-    width: 60vh;
+    width: 30vw;
 }
+
+.segment-info {
+    width: 60vh;
+    margin-bottom: 2em;
+}
+
+.segment-info a {
+    text-decoration: none;
+    color: white;
+}
+
+#blue-link {
+    color: #3C8AE5; 
+}
+
+#blue-link:hover {
+    color:#007FAE;
+}
+
+.segment-info a:hover {
+    color:#007FAE;
+}
+
 .seg1{
-    background-color: #00EBC6;
+    color: #3C8AE5;
+    background-color: white;
     
 }
 
@@ -275,7 +312,8 @@ p {
 }
 
 .seg3{
-    background-color: #00EBC6;
+    color: #3C8AE5;
+    background-color: white;
 }
 
 .seg4{
@@ -283,48 +321,16 @@ p {
 }
 
 .seg5{
-    background-color: #00EBC6;
+    color: #3C8AE5;
+    background-color: white;
 }
 .seg6{
-    background-color: #4B9CD3;
+    color: #3C8AE5;
+    background-color: white;
 }
 
-.seg-text{
+.seg-text-white{
     color: white;
-}
-
-/* END OF SECTIONS */
-
-/* media query for tablet portrait layout (768px to 959px) */
-@media only screen and (max-width: 1208px) {
-    /* ...all styles specific to tablet portrait view go here*/
-    #segment{
-        height: 100vh;
-        flex-direction: column;
-    
-    }
-
-    .segment-pictures{
-        width: 70vh;
-    }
-
-
-
- }
- 
-/* media query for mobile landscape layout (480px to 767px) */
-@media only screen and (max-width: 767px) {
-    /* ...all styles specific to mobile landscape view go here */
-    #segment{
-        height: 125vh;
-        flex-direction: column;
-    
-    }
-
-    .segment-pictures{
-        width: 60vh;
-    }
-
 }
 
 /* Contact Page */
@@ -389,31 +395,71 @@ p {
     margin-top: 8px;
     width: 100%;
   }
+
+  /* END OF SECTIONS */
+
+/* media query for tablet portrait layout (768px to 959px) */
+@media only screen and (max-width: 1208px) {
+    /* ...all styles specific to tablet portrait view go here*/
+    #segment{
+        height: 100vh;
+        flex-direction: column;
+    
+    }
+
+    .segment-pictures{
+        width: 70vw;
+    }
+ }
+ 
+/* media query for mobile landscape layout (480px to 767px) */
+@media only screen and (max-width: 767px) {
+    /* ...all styles specific to mobile landscape view go here */
+    #segment{
+        height: 125vh;
+        flex-direction: column;
+    
+    }
+
+    .segment-pictures{
+        width: 60vw;
+    }
+
+}
  
 /* media query for mobile portrait layout (479px or less) */
 @media only screen and (max-width: 479px) {
-
-    .segment-pictures{
-        width: 60vh;
-    }
 
     @supports (grid-area:auto) { 
         .site {
             display: grid;
             width: 100vw;
             grid-template-columns: 1fr;
-            grid-gap: 3px;
-            grid-template-rows: repeat(4, 1fr);
+            grid-template-rows: repeat(3, 1fr);
             grid-template-areas: 
-            'hd'
             'nv'
             'main'
             'footer'  
         }
+
+        .nav {
+            width: 100vw;
+            grid-area: nv;
+            position: relative;
+        }
+
+        main {
+            width: 100vw;
+            grid-area: main;
+        }
+
+        footer {
+            width: 100vw;
+            grid-area: footer;
+        }
+
+        .segment-pictures{
+            width: 80vw;
+        }
     }
  } 
-
-
-/* @media only screen and (max-width: 479px) {
-    
-}  */

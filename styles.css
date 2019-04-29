@@ -71,6 +71,10 @@ p {
         color: white;
     }
 
+    .mobile-icon {
+        display: none;
+    }
+
     /* Main */
     main {
         grid-area: main;
@@ -143,7 +147,6 @@ p {
         padding-top: 5em;
         background-color: #B5DCFB;
         width: 100vw;
-        height: 90vh;
         line-height: 2em;
         background-attachment: fixed;
         background-position: center;
@@ -289,11 +292,11 @@ p {
     color: white;
 }
 
-#blue-link {
-    color: #3C8AE5; 
+#teal {
+    color: #00EBC6; 
 }
 
-#blue-link:hover {
+#teal:hover {
     color:#007FAE;
 }
 
@@ -410,25 +413,6 @@ p {
     .segment-pictures{
         width: 70vw;
     }
- }
- 
-/* media query for mobile landscape layout (480px to 767px) */
-@media only screen and (max-width: 767px) {
-    /* ...all styles specific to mobile landscape view go here */
-    #segment{
-        height: 125vh;
-        flex-direction: column;
-    
-    }
-
-    .segment-pictures{
-        width: 60vw;
-    }
-
-}
- 
-/* media query for mobile portrait layout (479px or less) */
-@media only screen and (max-width: 479px) {
 
     @supports (grid-area:auto) { 
         .site {
@@ -456,6 +440,137 @@ p {
         footer {
             width: 100vw;
             grid-area: footer;
+        }
+
+        .segment-pictures{
+            width: 80vw;
+        }
+    }
+ }
+ 
+/* media query for mobile landscape layout (480px to 767px) */
+@media only screen and (max-width: 767px) {
+    /* ...all styles specific to mobile landscape view go here */
+    #segment{
+        height: 125vh;
+        flex-direction: column;
+    
+    }
+
+    .segment-pictures{
+        width: 60vw;
+    }
+
+    @supports (grid-area:auto) { 
+        .site {
+            display: grid;
+            width: 100vw;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(3, 1fr);
+            grid-template-areas: 
+            'nv'
+            'main'
+            'footer'  
+        }
+
+        .nav {
+            width: 100vw;
+            grid-area: nv;
+            position: relative;
+        }
+
+        main {
+            width: 100vw;
+            grid-area: main;
+        }
+
+        footer {
+            width: 100vw;
+            grid-area: footer;
+        }
+    }
+
+}
+ 
+/* media query for mobile portrait layout (479px or less) */
+@media only screen and (max-width: 479px) {
+
+    @supports (grid-area:auto) { 
+        .site {
+            display: grid;
+            width: 100vw;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(3, 1fr);
+            grid-template-areas: 
+            'nv'
+            'main'
+            'footer'  
+        }
+
+        .nav, .nav-container, .background-logo, .about-information, .logo, footer, main {
+            width: 100vw;
+        }
+
+        .nav-container {
+            padding: 0;
+        }
+
+        .nav ul {
+            width: 60vw;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .nav {
+            grid-area: nv;
+            position: relative;
+        }
+
+        .nav-item {
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0;
+        }
+
+        .mobile-icon {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .nav-link {
+            display: none;
+        }
+    
+        .nav-item:hover a{
+            color: #007FAE;
+        }
+    
+        .nav-item a{
+            text-decoration: none;
+            color: white;
+        }
+
+        main {
+            grid-area: main;
+        }
+
+        .logo img {
+            width: 70%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .about-information {
+            padding-bottom: 2em;
+        }
+
+        footer {
+            grid-area: footer;
+        }
+
+        .vertical {
+            width: 25%;
         }
 
         .segment-pictures{

@@ -57,6 +57,7 @@ p {
         margin-left: auto;
         margin-right: auto;
         padding: 1em;
+        font-size: 20px;
         text-decoration: none;
     }
 
@@ -77,12 +78,23 @@ p {
     }
 
     .logo {
-        background-image: url("images/big-logo.png");
+        background: white;;
         height: 90vh;
+        margin-left: auto;
+        margin-right: auto;
         background-attachment: fixed;
         background-position: center;
         background-repeat: no-repeat;
+    }
+
+    .logo img {
         animation: heartbeat 5s infinite;
+        margin-top: 5em;
+    }
+
+    .fa-arrow-down {
+        width: 10vh;
+        height: 10vh;
     }
 
     @keyframes heartbeat {
